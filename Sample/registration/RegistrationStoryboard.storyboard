@@ -76,6 +76,9 @@
                                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" title="Next"/>
+                                                        <connections>
+                                                            <segue destination="XXl-n9-81M" kind="showDetail" id="9uf-dW-TdG"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -232,7 +235,56 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ujq-3A-GQc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1622" y="-91"/>
+            <point key="canvasLocation" x="2267" y="-90"/>
+        </scene>
+        <!--User View Controller-->
+        <scene sceneID="NoN-UH-20h">
+            <objects>
+                <viewController storyboardIdentifier="UserViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XXl-n9-81M" customClass="UserViewController" customModule="Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ikC-1M-458">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="su0-7u-6bK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QNz-Sv-YYe"/>
+                                </constraints>
+                                <items>
+                                    <navigationItem title="User Data" id="X4d-JE-dp1">
+                                        <barButtonItem key="leftBarButtonItem" image="arrowshape.backward" catalog="system" id="E0T-6F-02x">
+                                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <action selector="onBackPressed:" destination="XXl-n9-81M" id="Vn1-Y2-01i"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" hidden="YES" id="jQz-M8-0DP"/>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDg-le-EkH">
+                                <rect key="frame" x="0.0" y="50" width="414" height="846"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="r49-hx-lIq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hDg-le-EkH" firstAttribute="leading" secondItem="r49-hx-lIq" secondAttribute="leading" id="0M6-GG-IUT"/>
+                            <constraint firstItem="hDg-le-EkH" firstAttribute="top" secondItem="su0-7u-6bK" secondAttribute="bottom" id="8w3-gV-Dha"/>
+                            <constraint firstItem="hDg-le-EkH" firstAttribute="trailing" secondItem="r49-hx-lIq" secondAttribute="trailing" id="ACF-8Q-WJx"/>
+                            <constraint firstAttribute="trailing" secondItem="su0-7u-6bK" secondAttribute="trailing" id="F5H-dn-FKI"/>
+                            <constraint firstItem="su0-7u-6bK" firstAttribute="leading" secondItem="ikC-1M-458" secondAttribute="leading" id="K5e-dE-jjl"/>
+                            <constraint firstItem="r49-hx-lIq" firstAttribute="bottom" secondItem="hDg-le-EkH" secondAttribute="bottom" id="Qou-p8-iHu"/>
+                            <constraint firstItem="su0-7u-6bK" firstAttribute="top" secondItem="r49-hx-lIq" secondAttribute="top" id="dmF-46-juK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ahr-Iz-v9Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TeY-xM-KrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1537.68115942029" y="-90.401785714285708"/>
         </scene>
     </scenes>
     <resources>
@@ -243,10 +295,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.63529411759999999" green="0.51764705879999995" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
