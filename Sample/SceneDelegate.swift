@@ -49,7 +49,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        application.addTapGestureRecognizer()
+        return true
+    }
 }
 
+extension UIApplication {
+    func addTapGestureRecognizer() {
+        guard let window = windows.first else { return }
+        let tapGesture = UITapGestureRecognizer(target: window, action: #selector(UIView.endEditing))
+        tapGesture.requiresExclusiveTouchType = false
+        tapGesture.cancelsTouchesInView = false
+        tapGesture.delegate = self
+        window.addGestureRecognizer(tapGesture)
+    }
+}
+
+extension UIApplication: UIGestureRecognizerDelegate {
+    public func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
+}
