@@ -31,17 +31,18 @@ class UserManager {
         }
     }
      
-    func fetchAllUsers() -> [User] {
+    func fetchAllUsers(completion: @escaping ([User], Error?) -> Void) {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         
         do {
             let users = try context.fetch(fetchRequest)
-            return users
+            completion(users, nil)
         } catch {
             print("Failed to fetch users: \(error.localizedDescription)")
-            return []
+            completion([], error)
         }
     }
+
      
     func fetchUser(byId id: String) -> User? {
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
