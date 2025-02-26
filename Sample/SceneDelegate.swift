@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Sample
 //
-//  Created by Moniruzzaman ShadhiN on 21/2/25.
+//  Created by Moniruzzaman ShadhiN
 //
 
 import UIKit

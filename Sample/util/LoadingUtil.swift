@@ -2,7 +2,7 @@
 //  LoadingUtil.swift
 //  Sample
 //
-//  Created by Moniruzzaman ShadhiN on 23/2/25.
+//  Created by Moniruzzaman ShadhiN  
 //
 
 import UIKit

@@ -2,7 +2,7 @@
 //  AlertUtil.swift
 //  Sample
 //
-//  Created by Moniruzzaman ShadhiN on 23/2/25.
+//  Created by Moniruzzaman ShadhiN  
 //
 
 import UIKit
@@ -26,4 +26,18 @@ class AlertUtil {
         viewController.present(alertController, animated: true, completion: nil)
     }
     
+    static func showAlert(title: String,
+                      message: String,
+                      from viewController: UIViewController,
+                      completion: (() -> Void)? = nil) {
+            
+            let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { _ in
+                completion?()
+            })
+            
+            DispatchQueue.main.async {
+                viewController.present(alert, animated: true)
+            }
+        }
 }
