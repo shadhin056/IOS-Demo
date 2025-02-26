@@ -83,11 +83,17 @@ class UserViewController: BaseViewController {
     extension UserViewController: UserTableViewCellDelegate {
         
         func userTableViewCell(_ cell: UserTableViewCell, didTapEmailFor user: UserModel) {
-            print(user.email)
+            viewModel.deleteUserById(user: user)
         }
     }
  
-    extension UserViewController: UserViewModelDelegate {
+extension UserViewController: UserViewModelDelegate {
+    func didFailToDeleteUser() {
+        DispatchQueue.main.async { [weak self] in
+            AlertUtil.showAlert(on: self!, title: "Error", message: "Error")
+        }
+    }
+    
         
         func didUpdateUsers() {
             DispatchQueue.main.async { [weak self] in

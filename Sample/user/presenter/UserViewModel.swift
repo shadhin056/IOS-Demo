@@ -20,6 +20,7 @@ protocol UserViewModelDelegate: AnyObject {
     func didFailToCreateUser()
     func didDeleteAllUsersSuccessfully()
     func didFailToDeleteAllUsers()
+    func didFailToDeleteUser()
 }
 
 class UserViewModel {
@@ -44,6 +45,18 @@ class UserViewModel {
                     self?.delegate?.didUpdateUsers()
                 }
             }
+    }
+    
+    func deleteUserById(user : UserModel) -> Bool{
+        let isSuccess = UserManager.shared.deleteUser(byId: user.id)
+        
+        if isSuccess {
+            fetchAllUsers()
+        }else{
+            delegate?.didFailToDeleteUser()
+        }
+        
+        return isSuccess
     }
     
     func createUser() {
