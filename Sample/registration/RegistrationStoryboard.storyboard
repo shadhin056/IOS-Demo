@@ -281,17 +281,17 @@
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UserTableViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UserTableViewCell" id="77W-vZ-Iu2" customClass="UserTableViewCell" customModule="Sample" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="50" width="394" height="30.666666030883789"/>
+                                                <rect key="frame" x="0.0" y="50" width="394" height="31.333333969116211"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="77W-vZ-Iu2" id="Ln3-qT-ndj">
-                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="30.666666030883789"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="31.333333969116211"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hoo-zp-8mS">
-                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="30.666666666666668"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="394" height="31.333333333333332"/>
                                                             <subviews>
                                                                 <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-Ii-kK6">
-                                                                    <rect key="frame" x="5" y="5" width="42" height="20.666666666666668"/>
+                                                                    <rect key="frame" x="5" y="5" width="42" height="21.333333333333332"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -313,7 +313,7 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="txtEmail" destination="gKc-Ii-kK6" id="ZBZ-bd-Mig"/>
+                                                    <outlet property="txtEmail" destination="gKc-Ii-kK6" id="Oc2-Gk-lkH"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -350,7 +350,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="ahr-Iz-v9Y"/>
                     <connections>
-                        <outlet property="tableView" destination="sOL-LL-wHt" id="s0t-Ln-eAh"/>
+                        <outlet property="tableView" destination="sOL-LL-wHt" id="Yn7-3M-QjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TeY-xM-KrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

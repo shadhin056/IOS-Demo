@@ -12,7 +12,7 @@ class RegistrationViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        }
+    }
     
     @IBAction func onBackPressed(_ sender: Any) {
         dismiss(animated: true)

@@ -8,7 +8,7 @@
 import UIKit
 
 protocol UserTableViewCellDelegate: AnyObject {
-    func userTableViewCell(_ cell: UserTableViewCell, didTapEmailFor user: User)
+    func userTableViewCell(_ cell: UserTableViewCell, didTapEmailFor user: UserModel)
 }
 
 class UserTableViewCell: UITableViewCell {
@@ -16,7 +16,7 @@ class UserTableViewCell: UITableViewCell {
     @IBOutlet weak var txtEmail: UILabel!
     static let identifier = "UserTableViewCell"
     weak var delegate: UserTableViewCellDelegate?
-    private var user: User?
+    private var user: UserModel?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class UserTableViewCell: UITableViewCell {
             txtEmail.addGestureRecognizer(tapGesture)
     }
     
-    func configure(with user: User) {
+    func configure(with user: UserModel) {
             self.user = user
         txtEmail.text = user.email
     }
