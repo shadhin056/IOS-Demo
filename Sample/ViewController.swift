@@ -10,7 +10,8 @@ import UIKit
 class ViewController: BaseViewController {
 
     override func viewDidLoad() {
-        super.viewDidLoad() 
+        super.viewDidLoad()
+        UserDefaultsManager.shared.saveString("shadhin", forKey: .username)
     }
 
     @IBAction func onLoginButtonClicked(_ sender: Any) {
